@@ -30,6 +30,7 @@ const Index = () => {
     });
 
     const onSubmit = (data) => {
+        localStorage.setItem('isVerified', true);
         navigate('/dashboard'); 
     };
 
