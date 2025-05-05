@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form';
 import { Form, Button } from 'react-bootstrap';
 import { yupResolver } from '@hookform/resolvers/yup';
 
-import GoogleImg from "../../../assets/images/google.png";
+import GoogleImg from "../../../assets/images/Google.png";
 import ImageRight from "../../../assets/images/imgRight.png";
 import FacebookImg from "../../../assets/images/facebook.png";
 
