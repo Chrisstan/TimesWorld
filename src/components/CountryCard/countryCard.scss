@@ -1,0 +1,35 @@
+@use '../../styles/main.scss' as *;
+@use '../../styles/abstracts/_variables.scss' as *;
+
+.countryInfo {
+    background-color: #fff;
+    border: 2px solid #3E3E3E;
+    padding: 16px;
+    box-shadow: 8px 8px 0px 0px #0000001A;
+    display: flex;
+    align-items: center;
+    column-gap: 28px;
+
+    &__flag img {
+        width: 100px;
+        height: auto;
+        border-radius: 4px;
+    }
+
+    &__details {
+        margin-top: 12px;
+
+        &--titlle {
+            @include font-style($font-size-xl, $font-weight-thick);
+            color: #3D3D3D;
+            @include responsive-font($font-size-base, $font-size-xl, $font-size-xxl);
+        }
+        
+        &--subTitle {
+            @include font-style($font-size-base, $font-weight-regular);
+            color: #6F6F6F;
+            @include responsive-font($font-size-sm, $font-size-xl, $font-size-xxl);
+        }
+    }
+}
+

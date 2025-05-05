@@ -1,0 +1,26 @@
+@use './_variables.scss' as *;
+
+@mixin font-style($size: $font-size-base, $weight: $font-weight-regular, $line-height: $line-height-base) {
+    font-family: $font-family-primary;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+}
+
+@mixin text-truncate {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin responsive-font($sm-size, $md-size, $lg-size) {
+    font-size: $sm-size;
+
+    @media (min-width: 768px) {
+        font-size: $md-size;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: $lg-size;
+    }
+}

@@ -1,0 +1,19 @@
+@use "../../styles/main.scss" as *;
+
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    padding: 1rem;
+    overflow-y: auto;
+
+    @media (max-width: 768px) {
+        padding: 0.5rem;
+    }
+
+    @media (max-width: 480px) {
+        padding: 0.25rem;
+    }
+}

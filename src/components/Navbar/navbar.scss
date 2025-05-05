@@ -1,0 +1,16 @@
+@use '../../styles/main.scss' as *;
+@use '../../styles/abstracts/variables' as *;
+
+.navigationBar{
+    padding-block: 20px;
+    &__brand{
+        @include font-style($font-size-xl, $font-weight-bold);
+    }
+    &__navbarRight{
+        justify-content: flex-end;
+    }
+
+    &__navLink{
+        @include font-style($font-size-base, $font-weight-regular);
+    }
+}

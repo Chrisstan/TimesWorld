@@ -1,0 +1,158 @@
+@use '../../../styles/main.scss' as *;
+@use '../../../styles/abstracts/_variables.scss' as *;
+@use 'sass:color';
+
+.loginContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10em;
+
+    &__loginCard {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    &__header {
+        @include font-style($font-size-xxl, $font-weight-bold);
+        line-height: 42px;
+        letter-spacing: 0;
+        @include responsive-font($font-size-xl, $font-size-xl, $font-size-xxl);
+    }
+
+    &__subTitle{
+        @include font-style($font-size-base, $font-weight-bold);
+        line-height: 24px;
+        letter-spacing: 0;
+    }
+
+    &__link {
+        @include font-style($font-size-base, $font-weight-thick);
+        line-height: 24px;
+        letter-spacing: 0;
+        text-decoration: none;
+        color: #587FFF;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__input {
+        @include font-style();
+        padding: 0.75rem;
+        border: 2px solid #3E3E3E;
+        width: 100%;
+
+        &::placeholder{
+            color: #3E3E3E;
+            @include font-style($font-size-base, $font-weight-thick);
+        }
+    }
+
+    &__checkInput{
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        & input{
+            height: 30px;
+            width: 30px;
+            border: 4px solid #3E3E3E;
+            cursor: pointer;
+        }
+
+        & label{
+            @include font-style($font-size-base, $font-weight-thick);
+            line-height: 24px;
+            letter-spacing: 0;
+            cursor: pointer;
+        }
+    }
+
+    &__button{
+        @include font-style();
+        background-color: #3C3C3C;
+        color: #fff;
+        padding-block: 18px;
+        cursor: pointer;
+        border: none;
+
+        &:hover {
+            background-color: color.adjust(#3C3C3C, $lightness: -10%);
+        }
+    }
+
+    &__baseText{
+        @include font-style($font-size-base, $font-weight-thick);
+        line-height: 24px;
+        letter-spacing: 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        text-wrap: nowrap;
+        margin-top: 10px;
+
+        &::before{
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 2px;
+            background-color: #CFCFCF;
+            margin-right: 10px;
+        }
+        &::after{
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 2px;
+            background-color: #CFCFCF;
+            margin-left: 10px;
+        }
+    }
+    &__socialIcons{
+        display: flex;
+        justify-content: space-between;
+        & .socialIcon{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #fff;
+            cursor: pointer;
+
+        }
+    }
+    &__image{
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .loginContainer{
+        column-gap: 4em;
+    }
+} 
+@media screen and (max-width: 768px){
+    .loginContainer{
+        &__header {
+            text-align: center;
+        }
+        &__subTitle{
+            text-align: center;
+        }
+        &__image{
+            display: none;
+        }
+    }
+} 
