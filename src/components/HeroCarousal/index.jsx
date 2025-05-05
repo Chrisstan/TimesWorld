@@ -1,5 +1,5 @@
 import React from 'react'
-import "./heroCarousal.scss";
+import "./HeroCarousal.scss";
 
 import Carousel from 'react-bootstrap/Carousel';
 import { useSelector } from 'react-redux';
