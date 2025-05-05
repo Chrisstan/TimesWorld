@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from "./pages/Auth/Login";
 import Dashboard from "./pages/Default/Dashboard";
 import AuthLayout from "./Layout/AuthLayout/AuthLayout";
-import DefaultLayout from './Layout/DefaultLayout/defaultLayout';
+import DefaultLayout from './Layout/DefaultLayout/DefaultLayout';
 	
 import { store } from './state/store';
 
