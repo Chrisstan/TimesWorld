@@ -34,6 +34,8 @@ const Index = () => {
         navigate('/dashboard'); 
     };
 
+    
+
     return (
         <div className="loginContainer">
             <div className="loginContainer__loginCard">
